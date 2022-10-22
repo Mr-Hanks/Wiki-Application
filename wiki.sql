@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 22, 2022 at 10:53 PM
+-- Generation Time: Oct 22, 2022 at 10:55 PM
 -- Server version: 10.4.21-MariaDB
 -- PHP Version: 8.0.11
 
@@ -20,6 +20,8 @@ SET time_zone = "+00:00";
 --
 -- Database: `wiki`
 --
+CREATE DATABASE IF NOT EXISTS `wiki` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
+USE `wiki`;
 
 -- --------------------------------------------------------
 
