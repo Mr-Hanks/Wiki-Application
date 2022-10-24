@@ -17,15 +17,15 @@
             $username = $_POST['username'];
         }
         if(isset($_POST['password'])){
-            $username = $_POST['password'];
+            $password = $_POST['password'];
         }
 
         if (isset($_POST['username']) && isset($_POST['password'])){
             $db = new mysqli("localhost", "root", "", "wiki");
-            $sql = "INSERT INTO wiki (username, password) VALUES ('$username', '".md5($password)."')";
-            $result->query($sql);
+            $sql = "INSERT INTO users (username, password) VALUES ('$username', '".md5($password)."')";
+            $db->query($sql);
 
-            if($result){
+            if($db){
                 echo "<div class ='form'>
                 <h3>You have successfully registered</h3>
                 <br/>Click here to <a href='login.php'>Login</a>
