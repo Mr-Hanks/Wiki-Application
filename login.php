@@ -18,14 +18,14 @@
 
         if (isset($_POST['username']) && isset($_POST['password'])){
             $db = new mysqli("localhost", "root", "", "wiki");
-            $sql = "SELECT * FROM users WHERE username='$username' and password='".md5($password)."'";
-            $db->query($sql);
-            $rows = mysqli_num_rows($db);
+            $input = "SELECT * FROM users WHERE username='$username' and password='".md5($password)."'";
+            $result= $db->query($input);
+            $rows = mysqli_num_rows($result);
 
             if($rows==1){
                 $_SESSION['username']=$username;
 
-                header(Location: "wiki.php");
+                header("Location: wiki.php");
             }else{
             echo "<div class= 'form'>
             <h3>Username/Password is incorrect</h3>
@@ -39,7 +39,7 @@
                 <form name="login" action="" method="POST">
                     <input type="text" name="username" placeholder="Username" required />
                     <input type="password" name="password" placeholder="Password" required />
-                    <input type="submit" name="submit" value="Register" />
+                    <input type="submit" name="submit" value="Login" />
                 </form>
                 <p>Not Registered? <a href='createuser.php'>Register Here</a></p>
             </div>
