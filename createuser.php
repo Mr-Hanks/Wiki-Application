@@ -21,7 +21,7 @@
         }
 
         if (isset($_POST['username']) && isset($_POST['password'])){
-            $db = new mysqli("localhost", "root", "", "P*ssword", "wiki");
+            $db = new mysqli("localhost", "root", "", "wiki");
             $sql = "INSERT INTO wiki (username, password) VALUES ('$username', '".md5($password)."')";
             $result->query($sql);
 
