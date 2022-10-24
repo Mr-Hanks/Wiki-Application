@@ -1,5 +1,5 @@
 <?php
-include("auth.php");
+include("authorization.php");
 ?>
 <!DOCTYPE html>
 <html>
