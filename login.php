@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Registration</title> 
+        <title>Login</title> 
         <meta charset="utf-8"/>
         <link href="style.css" type="text/css" rel="stylesheet">
     </head>
