@@ -12,7 +12,6 @@
 
     <body>
         <?php
-        #require('database.php');
         if(isset($_POST['username'])){
             $username = $_POST['username'];
         }
@@ -35,7 +34,7 @@
             ?>
             <div class="form">
                 <h1>Registration</h1>
-                <form name="registration" action="" method="post">
+                <form name="registration" action="" method="POST">
                     <input type="text" name="username" placeholder="Username" required />
                     <input type="password" name="password" placeholder="Password" required />
                     <input type="submit" name="submit" value="Register" />
