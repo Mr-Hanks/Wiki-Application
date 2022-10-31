@@ -45,8 +45,8 @@ include("authorization.php");
         <form action="addarticle.php" method=POST>
             <input class="text" type="text" name="shortTitle" placeholder="Enter A Short Title"> <br>
             <input class="text" type="text" name="title" placeholder="Enter The Title"> <br>
-            <input class="text" type="text" name="body" placeholder="Enter The Article's Body" class="textbox"> <br>
-            <input class="submitbttn" type="submit" value="Add Article!" class="textbttn">
+            <textarea class="textbox" name="body" placeholder="Enter The Article's Body"></textarea> <br>
+            <input class="textbttn" type="submit" value="Add Article!" class="textbttn">
         </form>
 
         <p><a href="wiki.php">Home</a></p>

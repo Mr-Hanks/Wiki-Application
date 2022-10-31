@@ -47,7 +47,7 @@ include("authorization.php");
             <input class="text" type="text" name="id" placeholder="Enter The Article Number" required> <br>
             <input class="text" type="text" name="shortTitle" placeholder="Enter Your New Short Title" required> <br>
             <input class="text" type="text" name="title" placeholder="Enter The New Title" required> <br>
-            <input class="textbox" type="text" name="body" placeholder="Enter The Article's New Body Text" required> <br>
+            <textarea class="textbox" name="body" placeholder="Enter The Article's New Body Text" required></textarea> <br>
             <input class ="submitbttn" type="submit" name="update" value="Update Article!">
         </form>
 

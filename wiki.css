@@ -25,8 +25,18 @@ a:hover{
     border: 1px solid #CCC;
     padding: 10px;
     color: #333;
-    font-size: 14px;
+    font-size: 12px;
     margin-top: 10px;
+}
+.textbox{
+    height:200px;
+    width:200px;
+    border: 1px solid #CCC;
+    padding: 10px;
+    color: #333;
+    font-size: 12px;
+    margin-top: 10px;
+    resize: none;
 }
 .submitbttn{
     padding: 10px 25px 8px;
@@ -48,9 +58,4 @@ a:hover{
     margin-bottom: 30px;
     width: 100%;
     margin: 10px auto;
-}
-.textbox
-{
-    height:200px;
-    font-size:14pt;
 }
