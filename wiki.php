@@ -6,7 +6,7 @@ include("authorization.php");
     <head>
         <title>Welcome</title> 
         <meta charset="utf-8"/>
-        <link href="style.css" type="text/css" rel="stylesheet">
+        <link href="wiki.css" type="text/css" rel="stylesheet">
     </head>
 
 

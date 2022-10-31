@@ -6,7 +6,7 @@ include("authorization.php");
     <head>
         <meta charset="utf-8">
         <title>Edit Your Article-Secured Page</title>
-        <link rel="stylesheet" href="css/style.css" />
+        <link href="wiki.css" type="text/css" rel="stylesheet">
     </head>
 
     <?php 
@@ -44,11 +44,11 @@ include("authorization.php");
         <div class="form">
         <p>Edit An Article</p>
         <form action="edit.php" method=POST>
-            <input type="text" name="id" placeholder="Enter The Article Number" required> <br>
-            <input type="text" name="shortTitle" placeholder="Enter Your New Short Title" required> <br>
-            <input type="text" name="title" placeholder="Enter The New Title" required> <br>
-            <input type="text" name="body" placeholder="Enter The Article's New Body Text" required> <br>
-            <input type="submit" name="update" value="Update Article!" class=textbttn>
+            <input class="text" type="text" name="id" placeholder="Enter The Article Number" required> <br>
+            <input class="text" type="text" name="shortTitle" placeholder="Enter Your New Short Title" required> <br>
+            <input class="text" type="text" name="title" placeholder="Enter The New Title" required> <br>
+            <input class="textbox" type="text" name="body" placeholder="Enter The Article's New Body Text" required> <br>
+            <input class ="submitbttn" type="submit" name="update" value="Update Article!">
         </form>
 
         <p>This is another secured page.</p>

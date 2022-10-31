@@ -19,8 +19,7 @@ a:hover{
     width: 300px;
     margin: 0 auto;
 }
-input[type='text'], input[type='email'],
-input[type='password'] {
+.text{
     width: 200px;
     border-radius: 2px;
     border: 1px solid #CCC;
@@ -29,7 +28,7 @@ input[type='password'] {
     font-size: 14px;
     margin-top: 10px;
 }
-input[type='submit']{
+.submitbttn{
     padding: 10px 25px 8px;
     color: #fff;
     background-color: #0067ab;
@@ -41,12 +40,17 @@ input[type='submit']{
     margin-top: 10px;
     cursor:pointer;
 }
-input[type='submit']:hover {
+.submit:hover {
     background-color: #024978;
 }
-#input .textbttn {
+.textbttn {
     padding: 5px;
     margin-bottom: 30px;
     width: 100%;
     margin: 10px auto;
+}
+.textbox
+{
+    height:200px;
+    font-size:14pt;
 }

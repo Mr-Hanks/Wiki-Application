@@ -3,7 +3,7 @@
     <head>
         <title>Login</title> 
         <meta charset="utf-8"/>
-        <link href="style.css" type="text/css" rel="stylesheet">
+        <link href="wiki.css" type="text/css" rel="stylesheet">
     </head>
 
     <body>
@@ -37,9 +37,9 @@
             <div class="form">
                 <h1>Login</h1>
                 <form name="login" action="" method="POST">
-                    <input type="text" name="username" placeholder="Username" required />
-                    <input type="password" name="password" placeholder="Password" required />
-                    <input type="submit" name="submit" value="Login" />
+                    <input class="text" type="text" name="username" placeholder="Username" required />
+                    <input class="text" type="password" name="password" placeholder="Password" required />
+                    <input class="submitbttn" type="submit" name="submit" value="Login" />
                 </form>
                 <p>Not Registered? <a href='createuser.php'>Register Here</a></p>
             </div>

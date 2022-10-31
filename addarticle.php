@@ -6,7 +6,7 @@ include("authorization.php");
     <head>
         <meta charset="utf-8">
         <title>Add An Article- Secured Page</title>
-        <link rel="stylesheet" href="css/style.css" />
+        <link href="wiki.css" type="text/css" rel="stylesheet">
     </head>
 
     <?php 
@@ -43,10 +43,10 @@ include("authorization.php");
         <p>This is another secured page.</p>
 
         <form action="addarticle.php" method=POST>
-            <input type="text" name="shortTitle" placeholder="Enter A Short Title"> <br>
-            <input type="text" name="title" placeholder="Enter The Title"> <br>
-            <input type="text" name="body" placeholder="Enter The Article's Body"> <br>
-            <input type="submit" value="Add Article!" class=textbttn>
+            <input class="text" type="text" name="shortTitle" placeholder="Enter A Short Title"> <br>
+            <input class="text" type="text" name="title" placeholder="Enter The Title"> <br>
+            <input class="text" type="text" name="body" placeholder="Enter The Article's Body" class="textbox"> <br>
+            <input class="submitbttn" type="submit" value="Add Article!" class="textbttn">
         </form>
 
         <p><a href="wiki.php">Home</a></p>

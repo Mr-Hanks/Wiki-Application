@@ -7,7 +7,7 @@
     <head>
         <title>Registration</title> 
         <meta charset="utf-8"/>
-        <link href="style.css" type="text/css" rel="stylesheet">
+        <link href="wiki.css" type="text/css" rel="stylesheet">
     </head>
 
     <body>
@@ -35,9 +35,9 @@
             <div class="form">
                 <h1>Registration</h1>
                 <form name="registration" action="" method="POST">
-                    <input type="text" name="username" placeholder="Username" required />
-                    <input type="password" name="password" placeholder="Password" required />
-                    <input type="submit" name="submit" value="Register" />
+                    <input class="text" type="text" name="username" placeholder="Username" required />
+                    <input class="text" type="password" name="password" placeholder="Password" required />
+                    <input class="submitbttn" type="submit" name="submit" value="Register"/>
                 </form>
             </div>
             <?php } ?>

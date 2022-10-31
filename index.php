@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <title>INFX371 Wiki!</title>
-        <link rel="stylesheet" href="css/style.css" />
+        <link href="wiki.css" type="text/css" rel="stylesheet">
     </head>
     <body>
         <div class="form">
