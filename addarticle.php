@@ -29,6 +29,11 @@ include("authorization.php");
             <h3>You have successfully added an article</h3>
             </div>";
         }
+        else{
+            echo "<div class ='form'>
+            <h3>Your article was not added</h3>
+            </div>";
+        }
     }
     ?>
 
@@ -36,15 +41,15 @@ include("authorization.php");
         <div class="form">
         <p>Add An Article</p>
         <p>This is another secured page.</p>
-        <p><a href="wiki.php">Home</a></p>
-        <a href="logout.php">Logout</a>
 
         <form action="addarticle.php" method=POST>
-            <input type="text" name="shortTitle" placeholder="Enter A Short Title">
-            <input type="text" name="title" placeholder="Enter The Title">
-            <input type="text" name="body" placeholder="Enter The Article's Body">
+            <input type="text" name="shortTitle" placeholder="Enter A Short Title"> <br>
+            <input type="text" name="title" placeholder="Enter The Title"> <br>
+            <input type="text" name="body" placeholder="Enter The Article's Body"> <br>
             <input type="submit" value="Add Article!" class=textbttn>
         </form>
+
+        <p><a href="wiki.php">Home</a></p>
         </div>
 
     </body>
