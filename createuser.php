@@ -21,14 +21,24 @@
 
         if (isset($_POST['username']) && isset($_POST['password'])){
             $db = new mysqli("localhost", "root", "", "wiki");
-            $sql = "INSERT INTO users (username, password) VALUES ('$username', '".md5($password)."')";
-            $db->query($sql);
+            $sql = "SELECT * FROM users WHERE username = '$username'";
+            $res = $db->query($sql);
 
-            if($db){
+            if($res->num_rows > 0){
                 echo "<div class ='form'>
-                <h3>You have successfully registered</h3>
-                <br/>Click here to <a href='login.php'>Login</a>
+                <h3>Username is already in use</h3>
+                <br/><a href='createuser.php'>Register With A New Username</a>
                 </div>";
+            }
+            else{
+                $query = "INSERT INTO users (username, password) VALUES ('$username', '".md5($password)."')";
+                $db->query($query);
+                if($db){
+                    echo "<div class ='form'>
+                    <h3>You have successfully registered</h3>
+                    <br/>Click Here To <a href='login.php'>Login</a>
+                    </div>";
+                }
             }
         }else{
             ?>

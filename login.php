@@ -29,7 +29,7 @@
             }else{
             echo "<div class= 'form'>
             <h3>Username/Password is incorrect</h3>
-            <br/>Click here to <a href='login.php'>Login</a>
+            <br/>Click Here To <a href='login.php'>Login</a>
             </div>";
             }
         }else{
