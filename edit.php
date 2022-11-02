@@ -28,7 +28,7 @@
             <h3>Edit Form</h3>
             <div>
                 <label for="shortTitle">Short Title:</label>
-                <?php echo "<span>$data[shortTitle]</span>"; ?>
+                <?php echo "<span><strong>$data[shortTitle]</span></strong>"; ?>
             </div>
             <div>
                 <label for="title">Title</label><br>

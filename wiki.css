@@ -7,7 +7,7 @@ body {
 }
 .clearfix:after{
     clear: both;
-}
+} 
 a{
     color:#0067ab;
     text-decoration:none;
