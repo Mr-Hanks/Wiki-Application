@@ -40,7 +40,6 @@ include("authorization.php");
     <body>
         <div class="form">
         <p>Add An Article</p>
-        <p>This is another secured page.</p>
 
         <form action="addarticle.php" method=POST>
             <input class="text" type="text" name="shortTitle" placeholder="Enter A Short Title"> <br>
