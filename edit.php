@@ -1,60 +1,48 @@
+<?php include("authorization.php"); ?>
 <?php
-include("authorization.php");
+    if(!isset($_GET['id'])){
+        // redirect to show page
+        die('id not provided');
+    }
+    
+    $id =  $_GET['id'];
+    $con = new mysqli("localhost", "root", "", "wiki");
+    $sql = "SELECT * FROM articles where id = '$id'";
+    $result = $con->query($sql);
+    if($result->num_rows != 1){
+        // redirect to show page
+        die('id is not in db');
+    }
+    $data = $result->fetch_assoc();
 ?>
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <title>Edit Your Article-Secured Page</title>
-        <link href="wiki.css" type="text/css" rel="stylesheet">
-    </head>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Edit</title>
+    <link href="wiki.css" type="text/css" rel="stylesheet">
+</head>
+<body>        
+    <div class="form">
+        <form action="modify.php?id=<?= $id ?>" method="POST">
+            <h3>Edit Form</h3>
+            <div>
+                <label for="shortTitle">Short Title:</label>
+                <?php echo "<span>$data[shortTitle]</span>"; ?>
+            </div>
+            <div>
+                <label for="title">Title</label><br>
+                <input type="text" class="text" name="title" value="<?= $data['title']?>"><br>
+            </div>
+            <div>
+                <label for="description">Description</label><br>
+                <textarea class="textbox" name="body"><?= $data['body']?></textarea><br>
+            </div>
 
-    <?php 
-    if(isset($_POST['id'])){
-        $id = $_POST['id'];
-    }
-    if(isset($_POST['shortTitle'])){
-        $shortTitle = $_POST['shortTitle'];
-    }
-    if(isset($_POST['title'])){
-        $mainTitle = $_POST['title'];
-    }
-    if(isset($_POST['body'])){
-        $bodyText = $_POST['body'];
-    }
-    if(isset($_POST['update'])){
-        $db = new mysqli("localhost", "root", "", "wiki");
-        $sql = "UPDATE articles SET shortTitle ='$shortTitle',title ='$mainTitle', body ='$bodyText' WHERE id= '$id' ";
-        $result = $db->query($sql);         
-        
-        if($result){
-            echo "<div class ='form'>
-            <h3>You have successfully edited your article</h3>
-            </div>";
-        }
-        else{
-            echo "<div class ='form'>
-            <h3>Your article was not edited</h3>
-            </div>";
-        }
-    }
-    ?>
-
-    <body>
-        <div class="form">
-        <p>Edit An Article</p>
-        <form action="edit.php" method=POST>
-            <input class="text" type="text" name="id" placeholder="Enter The Article Number" required> <br>
-            <input class="text" type="text" name="shortTitle" placeholder="Enter Your New Short Title" required> <br>
-            <input class="text" type="text" name="title" placeholder="Enter The New Title" required> <br>
-            <textarea class="textbox" name="body" placeholder="Enter The Article's New Body Text" required></textarea> <br>
-            <input class ="submitbttn" type="submit" name="update" value="Update Article!">
+            <input type="submit" name="editForm" value="Edit The Article!" class="submitbttn">
         </form>
-
-        <p>This is another secured page.</p>
-        <p><a href="wiki.php">Home</a></p>
-        <a href="logout.php">Logout</a>
-        </div>
-
-    </body>
+     </div>
+        
+    
+</body>
 </html>

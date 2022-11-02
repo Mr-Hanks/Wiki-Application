@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 31, 2022 at 03:12 AM
+-- Generation Time: Nov 02, 2022 at 10:58 PM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 8.1.6
 
@@ -41,8 +41,7 @@ CREATE TABLE `articles` (
 --
 
 INSERT INTO `articles` (`id`, `shortTitle`, `title`, `body`) VALUES
-(1, '371', 'INFX 371 Project', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'),
-(2, 'Short Title', 'Title', 'Body Text');
+(1, '371', 'INFX 371 Article ', 'This is a wiki application made for INFX 371 at the University Of Louisiana at Lafayette. ');
 
 -- --------------------------------------------------------
 
@@ -61,8 +60,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `username`, `password`) VALUES
-(3, 'collin', '098f6bcd4621d373cade4e832627b4f6'),
-(4, 'test', '098f6bcd4621d373cade4e832627b4f6');
+(3, 'collin', '098f6bcd4621d373cade4e832627b4f6');
 
 --
 -- Indexes for dumped tables
@@ -78,7 +76,8 @@ ALTER TABLE `articles`
 -- Indexes for table `users`
 --
 ALTER TABLE `users`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `username` (`username`);
 
 --
 -- AUTO_INCREMENT for dumped tables
@@ -88,13 +87,13 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `articles`
 --
 ALTER TABLE `articles`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

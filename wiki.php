@@ -1,6 +1,16 @@
 <?php
 include("authorization.php");
 ?>
+<?php 
+$short_title =  $_GET['short_title'];
+
+$con = new mysqli("localhost", "root", "", "wiki");
+
+$query = "SELECT * FROM articles WHERE shortTitle = '$short_title'";
+$result = $con->query($query);
+
+?>
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -14,25 +24,23 @@ include("authorization.php");
         <div class="form">
             <p>Welcome <?php echo $_SESSION['username']; ?>!</p>
             <p>See Our Articles Below!</p>
-            <?php 
-    
-            $db = new mysqli("localhost", "root", "", "wiki");
-            $sql = "SELECT * FROM articles";
-            $result = $db->query($sql);  
-    
-            if($result->num_rows > 0){
-                while ($row = $result->fetch_assoc()){
-                    echo"<strong>Article Number:</strong> <span>$row[id]</span> <br>
-                    <strong>Short Title: </strong> <span>$row[shortTitle]</span> <br> 
-                    <strong>Title: </strong> <span>$row[title]</span> <br> 
-                    <strong>Article Body: </strong> <span>$row[body]</span> <br>";?>
-                    <a href="edit.php">Edit The Article</a> <br>
-                    <br>
-                    <?php
-                }
-            }
-                
-            ?>
+            
+            <form action="wiki.php" method="POST">
+                <?php
+                if($result->num_rows > 0){
+                    while ($row = $result->fetch_assoc()){
+                        echo "<strong>Short Title: </strong> <span>$row[shortTitle]</span> <br> 
+                        <strong>Title: </strong> <span>$row[title]</span> <br> 
+                        <strong>Article Body: </strong> <span>$row[body]</span> <br>
+                        <a href='edit.php?id=" .$row['id'] ."'>Edit The Article</a> <br>";?>
+                        <br>
+                        
+                        <input type="hidden" name="short_title" value="<?php echo $short_title;?>">
+                        <?php
+                    }
+                }   
+                ?>
+            </form>
             <p><a href="addarticle.php">Add An Article</a></p>
             <a href="logout.php">Logout</a>
         </div>

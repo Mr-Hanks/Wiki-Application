@@ -49,7 +49,7 @@ include("authorization.php");
             <input class="textbttn" type="submit" value="Add Article!" class="textbttn">
         </form>
 
-        <p><a href="wiki.php">Home</a></p>
+        <p><a href="wiki.php?short_title=371">Home</a></p>
         </div>
 
     </body>
