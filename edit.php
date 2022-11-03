@@ -20,10 +20,10 @@
 <head>
     <meta charset="utf-8">
     <title>Edit</title>
-    <link href="wiki.css" type="text/css" rel="stylesheet">
+    <link href="style.css" type="text/css" rel="stylesheet">
 </head>
 <body>        
-    <div class="form">
+    <div class="other-form">
         <form action="modify.php?id=<?= $id ?>" method="POST">
             <h3>Edit Form</h3>
             <div>
@@ -39,7 +39,10 @@
                 <textarea class="textbox" name="body"><?= $data['body']?></textarea><br>
             </div>
 
-            <input type="submit" name="editForm" value="Edit The Article!" class="submitbttn">
+            <div class="button-container-1">
+                <span class="mas">UPDATE</span>
+                <button id='work' type="submit" name="Hover">UPDATE</button>
+            </div>
         </form>
      </div>
         

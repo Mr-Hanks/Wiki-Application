@@ -16,12 +16,12 @@ $result = $con->query($query);
     <head>
         <title>Welcome</title> 
         <meta charset="utf-8"/>
-        <link href="wiki.css" type="text/css" rel="stylesheet">
+        <link href="style.css" type="text/css" rel="stylesheet">
     </head>
 
 
     <body>
-        <div class="form">
+        <div class="other-form">
             <p>Welcome <?php echo $_SESSION['username']; ?>!</p>
             <p>See Our Articles Below!</p>
             
