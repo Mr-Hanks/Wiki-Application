@@ -3,13 +3,27 @@
     <head>
         <meta charset="utf-8">
         <title>INFX371 Wiki!</title>
-        <link href="wiki.css" type="text/css" rel="stylesheet">
+        <link href="test.css" type="text/css" rel="stylesheet">
     </head>
     <body>
         <div class="form">
         <p>Welcome To Our INFX371 Wiki!</p>
-        <p><a href="login.php">Login</a></p>
-        <a href="createuser.php">Register</a>
+        
+            <img class="gettothemiddle" src="assets/purple-play-company-logo-741ADB4144-seeklogo.com.png">
+        <div id="getinline">
+            <div class="button-container-1">
+                <span class="mas">LOGIN</span>
+                    <a href="login.php">
+                <button id='work' type="submit" name="Hover">LOGIN</button>
+                    </a>
+            </div>
+            <div class="button-container-1">
+                <span class="mas">REGISTER</span>
+                <a href="createuser.php">
+                    <button id='work' type="submit" name="Hover">REGISTER</button>
+                </a>
+            </div>
+        </div>
         </div>
     </body>
 </html>

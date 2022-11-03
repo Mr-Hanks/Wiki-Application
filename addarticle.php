@@ -6,7 +6,7 @@ include("authorization.php");
     <head>
         <meta charset="utf-8">
         <title>Add An Article- Secured Page</title>
-        <link href="wiki.css" type="text/css" rel="stylesheet">
+        <link href="test.css" type="text/css" rel="stylesheet">
     </head>
 
     <?php 
@@ -25,12 +25,12 @@ include("authorization.php");
         $db->query($sql);         
         
         if($db){
-            echo "<div class ='form'>
+            echo "<div class ='other-form'>
             <h3>You have successfully added an article</h3>
             </div>";
         }
         else{
-            echo "<div class ='form'>
+            echo "<div class ='other-form'>
             <h3>Your article was not added</h3>
             </div>";
         }
@@ -39,16 +39,25 @@ include("authorization.php");
 
     <body>
         <div class="form">
-        <p>Add An Article</p>
+            <p>Add An Article</p>
 
-        <form action="addarticle.php" method=POST>
-            <input class="text" type="text" name="shortTitle" placeholder="Enter A Short Title"> <br>
-            <input class="text" type="text" name="title" placeholder="Enter The Title"> <br>
-            <textarea class="textbox" name="body" placeholder="Enter The Article's Body"></textarea> <br>
-            <input class="textbttn" type="submit" value="Add Article!" class="textbttn">
-        </form>
-
-        <p><a href="wiki.php?short_title=371">Home</a></p>
+            <form action="addarticle.php" method=POST>
+                <input class="text" type="text" name="shortTitle" placeholder="Enter A Short Title"> <br>
+                <input class="text" type="text" name="title" placeholder="Enter The Title"> <br>
+                <textarea class="textbox" name="body" placeholder="Enter The Article's Body"></textarea> <br>
+                <div class="button-container-1">
+                    <span class="mas">ADD</span>
+                    <button id='work' type="submit" name="Hover">ADD</button>
+                </div>
+            </form>
+            <div id="totheleft">
+                <div class="button-container-1">
+                    <span class="mas">Home</span>
+                    <a href="wiki.php?short_title=371">
+                        <button id='work' type="submit" name="Hover">Home</button>
+                </div>
+                
+            </div>    
         </div>
 
     </body>
