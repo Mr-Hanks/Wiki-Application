@@ -1,3 +1,4 @@
+<?php ob_start(); ?>
 <?php include("authorization.php"); 
 include("edit.php")?>
 <?php
