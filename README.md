@@ -1,4 +1,2 @@
-# infx371project3
-This assignment tests your understanding of PHP and interaction with MySQL.
-Your task is to create a wiki app that will also allow users to add articles. 
-This is a very basic PHP/MySQL application. 
+# Wiki-Application
+A wiki app that will also allow users to add articles. This app has register/login functionality where duplicate users cannot exist. Users are also able to edit the articles. You navigate to each article with the url (Ex. http://localhost/Wiki-Application/wiki.php?short_title=Test).
